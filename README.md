@@ -7,8 +7,9 @@ Final Project for DS 6021
  
 DS 6021: Introduction to Predictive Modeling · Final Project · Group [#]
  
-🔗 **Live app:** [link once deployed]
-📊 **Slides:** [`docs/slides.pdf`](docs/slides.pdf)
+**Live app:** https://cryptolens-ds6021-dngt49c9gwjjcvhiezyzfy.streamlit.app/
+
+**Slides:** [`docs/slides.pdf`](docs/slides.pdf)
  
 > 🚧 **Draft.** Sections marked `TODO` get filled in as each phase wraps up. See the project timeline for owners and dates.
  
