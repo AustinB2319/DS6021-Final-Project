@@ -23,7 +23,7 @@ ASSET_NAMES = {"btc": "Bitcoin (BTC)", "eth": "Ethereum (ETH)",
                "xrp": "XRP", "sol": "Solana (SOL)"}
 ONCHAIN_ASSETS = ["btc", "eth", "xrp"]          # Coin Metrics Community has no SOL
 
-REGIME_COLORS = {"calm": "#2a9d8f", "normal": "#8d99ae", "stressed": "#e76f51"}
+REGIME_COLORS = {"calm": "#5c5f66", "normal": "#c9cacf", "stressed": "#ff7a1a"}
 FEATURE_SET_NAMES = {"market": "Market only", "market_onchain": "Market + on-chain"}
 MODEL_NAMES = {"baseline": "Naive baseline", "logistic": "Logistic regression",
                "knn": "KNN", "tree": "Classification tree", "ensemble": "Tree ensemble"}

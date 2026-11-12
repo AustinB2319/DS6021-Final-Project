@@ -36,9 +36,11 @@ if master is not None:
 
 left, right = st.columns(2)
 with left:
-    fig = px.scatter(r, x="pc1", y="pc2", color="regime_name", opacity=0.5,
-                     color_discrete_map=REGIME_COLORS, title="Asset-days in PCA space",
-                     labels={"pc1": "PC1", "pc2": "PC2", "regime_name": "Regime"})
+    fig = px.scatter(r.assign(Regime=r["regime_name"].str.title()), x="pc1", y="pc2",
+                     color="Regime", opacity=0.55, title="Asset-days in PCA space",
+                     color_discrete_map={k.title(): v for k, v in REGIME_COLORS.items()},
+                     category_orders={"Regime": [k.title() for k in REGIME_COLORS]},
+                     labels={"pc1": "PC1", "pc2": "PC2"})
     fig.update_traces(marker_size=4)
     fig.update_layout(height=380, margin=dict(t=50, b=10))
     st.plotly_chart(fig, width="stretch")

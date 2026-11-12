@@ -31,7 +31,8 @@ metric = st.radio("Metric", ["ROC-AUC", "F1", "RECALL", "PRECISION"], horizontal
 col = f"{metric} (test)"
 fig = px.bar(table, x="Model", y=col, color="Feature set", barmode="group", text_auto=".2f",
              category_orders={"Model": [MODEL_NAMES[k] for k in MODEL_NAMES]},
-             title=f"{metric.title()} on the 2025 test set")
+             title=f"{metric.title()} on the 2025 test set",
+             color_discrete_map={"Market only": "#5c5f66", "Market + on-chain": "#ff7a1a"})
 fig.update_layout(height=400, yaxis_range=[0, 1], margin=dict(t=50, b=10),
                   legend=dict(orientation="h", y=-0.15))
 st.plotly_chart(fig, width="stretch")
