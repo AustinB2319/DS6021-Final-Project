@@ -1,0 +1,8 @@
+event_id,date,asset,event_type,jurisdiction,title,source_url
+mock_terra_collapse_2022,2022-05-09,all,exchange_failure,global,[MOCK] Terra/LUNA collapse,
+mock_ftx_collapse_2022,2022-11-08,all,exchange_failure,global,[MOCK] FTX halts withdrawals,
+mock_btc_etf_2024,2024-01-10,btc,etf,us,[MOCK] Spot bitcoin ETFs approved,
+mock_btc_halving_2024,2024-04-20,btc,halving,global,[MOCK] Bitcoin halving,
+mock_eth_merge_2022,2022-09-15,eth,protocol_upgrade,global,[MOCK] Ethereum Merge to proof of stake,
+mock_eth_etf_2024,2024-07-23,eth,etf,us,[MOCK] Spot ether ETFs begin trading,
+mock_xrp_ruling_2023,2023-07-13,xrp,court_ruling,us,[MOCK] SEC v. Ripple summary judgment,

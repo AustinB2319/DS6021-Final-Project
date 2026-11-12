@@ -1,0 +1,388 @@
+{
+  "is_mock": true,
+  "generated_at": "2026-11-09",
+  "target": "high_vol_7d",
+  "train_period": [
+    "2021-01-01",
+    "2024-12-31"
+  ],
+  "test_period": [
+    "2025-01-01",
+    "2025-12-31"
+  ],
+  "final_model": {
+    "model": "ensemble",
+    "feature_set": "market_onchain"
+  },
+  "decision_threshold": 0.5,
+  "models": [
+    {
+      "model": "baseline",
+      "feature_set": "market",
+      "assets": [
+        "btc",
+        "eth",
+        "sol",
+        "xrp"
+      ],
+      "features": [],
+      "cv": {
+        "roc_auc": 0.667,
+        "f1": 0.486,
+        "precision": 0.486,
+        "recall": 0.486
+      },
+      "test": {
+        "roc_auc": 0.737,
+        "f1": 0.658,
+        "precision": 0.652,
+        "recall": 0.665
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    },
+    {
+      "model": "ensemble",
+      "feature_set": "market",
+      "assets": [
+        "btc",
+        "eth",
+        "sol",
+        "xrp"
+      ],
+      "features": [
+        "mkt_ret_1d",
+        "mkt_ret_7d",
+        "mkt_vol_7d",
+        "mkt_vol_30d",
+        "mkt_momentum_14d",
+        "mkt_volume_chg_7d",
+        "mkt_drawdown",
+        "sent_fng_value",
+        "macro_vix",
+        "macro_us10y",
+        "cat_trend_state",
+        "mkt_btc_corr_30d",
+        "cat_consensus",
+        "cat_asset",
+        "cat_fng_class",
+        "cat_day_of_week",
+        "cat_halving_phase"
+      ],
+      "cv": {
+        "roc_auc": 0.779,
+        "f1": 0.486,
+        "precision": 0.554,
+        "recall": 0.433
+      },
+      "test": {
+        "roc_auc": 0.828,
+        "f1": 0.644,
+        "precision": 0.713,
+        "recall": 0.588
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    },
+    {
+      "model": "ensemble",
+      "feature_set": "market_onchain",
+      "assets": [
+        "btc",
+        "eth",
+        "xrp"
+      ],
+      "features": [
+        "mkt_ret_1d",
+        "mkt_ret_7d",
+        "mkt_vol_7d",
+        "mkt_vol_30d",
+        "mkt_momentum_14d",
+        "mkt_volume_chg_7d",
+        "mkt_drawdown",
+        "sent_fng_value",
+        "macro_vix",
+        "macro_us10y",
+        "oc_tx_cnt_logchg_7d",
+        "oc_adr_act_z30",
+        "oc_fee_z30",
+        "cat_trend_state",
+        "mkt_btc_corr_30d",
+        "cat_consensus",
+        "cat_asset",
+        "cat_fng_class",
+        "cat_day_of_week",
+        "cat_halving_phase"
+      ],
+      "cv": {
+        "roc_auc": 0.811,
+        "f1": 0.515,
+        "precision": 0.586,
+        "recall": 0.458
+      },
+      "test": {
+        "roc_auc": 0.854,
+        "f1": 0.692,
+        "precision": 0.76,
+        "recall": 0.635
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    },
+    {
+      "model": "knn",
+      "feature_set": "market",
+      "assets": [
+        "btc",
+        "eth",
+        "sol",
+        "xrp"
+      ],
+      "features": [
+        "mkt_ret_1d",
+        "mkt_ret_7d",
+        "mkt_vol_7d",
+        "mkt_vol_30d",
+        "mkt_momentum_14d",
+        "mkt_volume_chg_7d",
+        "mkt_drawdown",
+        "sent_fng_value",
+        "macro_vix",
+        "macro_us10y",
+        "cat_trend_state",
+        "mkt_btc_corr_30d",
+        "cat_consensus",
+        "cat_asset",
+        "cat_fng_class",
+        "cat_day_of_week",
+        "cat_halving_phase"
+      ],
+      "cv": {
+        "roc_auc": 0.747,
+        "f1": 0.455,
+        "precision": 0.522,
+        "recall": 0.403
+      },
+      "test": {
+        "roc_auc": 0.771,
+        "f1": 0.589,
+        "precision": 0.66,
+        "recall": 0.532
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    },
+    {
+      "model": "knn",
+      "feature_set": "market_onchain",
+      "assets": [
+        "btc",
+        "eth",
+        "xrp"
+      ],
+      "features": [
+        "mkt_ret_1d",
+        "mkt_ret_7d",
+        "mkt_vol_7d",
+        "mkt_vol_30d",
+        "mkt_momentum_14d",
+        "mkt_volume_chg_7d",
+        "mkt_drawdown",
+        "sent_fng_value",
+        "macro_vix",
+        "macro_us10y",
+        "oc_tx_cnt_logchg_7d",
+        "oc_adr_act_z30",
+        "oc_fee_z30",
+        "cat_trend_state",
+        "mkt_btc_corr_30d",
+        "cat_consensus",
+        "cat_asset",
+        "cat_fng_class",
+        "cat_day_of_week",
+        "cat_halving_phase"
+      ],
+      "cv": {
+        "roc_auc": 0.773,
+        "f1": 0.482,
+        "precision": 0.549,
+        "recall": 0.43
+      },
+      "test": {
+        "roc_auc": 0.812,
+        "f1": 0.623,
+        "precision": 0.716,
+        "recall": 0.551
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    },
+    {
+      "model": "logistic",
+      "feature_set": "market",
+      "assets": [
+        "btc",
+        "eth",
+        "sol",
+        "xrp"
+      ],
+      "features": [
+        "mkt_ret_1d",
+        "mkt_ret_7d",
+        "mkt_vol_7d",
+        "mkt_vol_30d",
+        "mkt_momentum_14d",
+        "mkt_volume_chg_7d",
+        "mkt_drawdown",
+        "sent_fng_value",
+        "macro_vix",
+        "macro_us10y",
+        "cat_trend_state",
+        "mkt_btc_corr_30d",
+        "cat_consensus",
+        "cat_asset",
+        "cat_fng_class",
+        "cat_day_of_week",
+        "cat_halving_phase"
+      ],
+      "cv": {
+        "roc_auc": 0.77,
+        "f1": 0.479,
+        "precision": 0.551,
+        "recall": 0.423
+      },
+      "test": {
+        "roc_auc": 0.815,
+        "f1": 0.629,
+        "precision": 0.694,
+        "recall": 0.576
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    },
+    {
+      "model": "logistic",
+      "feature_set": "market_onchain",
+      "assets": [
+        "btc",
+        "eth",
+        "xrp"
+      ],
+      "features": [
+        "mkt_ret_1d",
+        "mkt_ret_7d",
+        "mkt_vol_7d",
+        "mkt_vol_30d",
+        "mkt_momentum_14d",
+        "mkt_volume_chg_7d",
+        "mkt_drawdown",
+        "sent_fng_value",
+        "macro_vix",
+        "macro_us10y",
+        "oc_tx_cnt_logchg_7d",
+        "oc_adr_act_z30",
+        "oc_fee_z30",
+        "cat_trend_state",
+        "mkt_btc_corr_30d",
+        "cat_consensus",
+        "cat_asset",
+        "cat_fng_class",
+        "cat_day_of_week",
+        "cat_halving_phase"
+      ],
+      "cv": {
+        "roc_auc": 0.803,
+        "f1": 0.52,
+        "precision": 0.595,
+        "recall": 0.462
+      },
+      "test": {
+        "roc_auc": 0.837,
+        "f1": 0.667,
+        "precision": 0.753,
+        "recall": 0.598
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    },
+    {
+      "model": "tree",
+      "feature_set": "market",
+      "assets": [
+        "btc",
+        "eth",
+        "sol",
+        "xrp"
+      ],
+      "features": [
+        "mkt_ret_1d",
+        "mkt_ret_7d",
+        "mkt_vol_7d",
+        "mkt_vol_30d",
+        "mkt_momentum_14d",
+        "mkt_volume_chg_7d",
+        "mkt_drawdown",
+        "sent_fng_value",
+        "macro_vix",
+        "macro_us10y",
+        "cat_trend_state",
+        "mkt_btc_corr_30d",
+        "cat_consensus",
+        "cat_asset",
+        "cat_fng_class",
+        "cat_day_of_week",
+        "cat_halving_phase"
+      ],
+      "cv": {
+        "roc_auc": 0.76,
+        "f1": 0.463,
+        "precision": 0.538,
+        "recall": 0.406
+      },
+      "test": {
+        "roc_auc": 0.799,
+        "f1": 0.622,
+        "precision": 0.686,
+        "recall": 0.568
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    },
+    {
+      "model": "tree",
+      "feature_set": "market_onchain",
+      "assets": [
+        "btc",
+        "eth",
+        "xrp"
+      ],
+      "features": [
+        "mkt_ret_1d",
+        "mkt_ret_7d",
+        "mkt_vol_7d",
+        "mkt_vol_30d",
+        "mkt_momentum_14d",
+        "mkt_volume_chg_7d",
+        "mkt_drawdown",
+        "sent_fng_value",
+        "macro_vix",
+        "macro_us10y",
+        "oc_tx_cnt_logchg_7d",
+        "oc_adr_act_z30",
+        "oc_fee_z30",
+        "cat_trend_state",
+        "mkt_btc_corr_30d",
+        "cat_consensus",
+        "cat_asset",
+        "cat_fng_class",
+        "cat_day_of_week",
+        "cat_halving_phase"
+      ],
+      "cv": {
+        "roc_auc": 0.801,
+        "f1": 0.519,
+        "precision": 0.59,
+        "recall": 0.463
+      },
+      "test": {
+        "roc_auc": 0.823,
+        "f1": 0.659,
+        "precision": 0.735,
+        "recall": 0.598
+      },
+      "notes": "MOCK \u2014 simulated scores"
+    }
+  ]
+}

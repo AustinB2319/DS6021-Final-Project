@@ -1,0 +1,10 @@
+run_id,date_run,model,feature_set,params,cv_roc_auc,cv_f1,cv_recall,notes,owner
+mock_001,2026-11-09,baseline,market,{},0.667,0.486,0.486,MOCK,mock
+mock_002,2026-11-09,ensemble,market,{},0.779,0.486,0.433,MOCK,mock
+mock_003,2026-11-09,ensemble,market_onchain,{},0.811,0.515,0.458,MOCK,mock
+mock_004,2026-11-09,knn,market,{},0.747,0.455,0.403,MOCK,mock
+mock_005,2026-11-09,knn,market_onchain,{},0.773,0.482,0.43,MOCK,mock
+mock_006,2026-11-09,logistic,market,{},0.77,0.479,0.423,MOCK,mock
+mock_007,2026-11-09,logistic,market_onchain,{},0.803,0.52,0.462,MOCK,mock
+mock_008,2026-11-09,tree,market,{},0.76,0.463,0.406,MOCK,mock
+mock_009,2026-11-09,tree,market_onchain,{},0.801,0.519,0.463,MOCK,mock
